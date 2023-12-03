@@ -11,7 +11,7 @@ const client = new Client({
 });
 
 client.on('ready', () => {
-    console.log(`✔️  ${client.user.username} is online.`);
+    console.log(`✔️  ${client.user.username} está online.`);
 });
 
 client.on('interactionCreate', (interaction) => {
@@ -20,13 +20,8 @@ client.on('interactionCreate', (interaction) => {
     if (interaction.commandName === 'oi') {
         interaction.reply('Oi!');
     }
-
-    if (interaction.commandName === 'ping') {
+    if(interaction.commandName === 'ping') {
         interaction.reply('Pong!');
-    }
-
-    if (interaction.commandName === 'papai') {
-        interaction.reply('Vem para o colinho do seu papai, bebê. 🥰');
     }
 });
 
