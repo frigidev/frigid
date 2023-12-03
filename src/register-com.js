@@ -9,18 +9,14 @@ const commands = [
     {
         name: 'ping',
         description: 'Pong!',
-    },
-    {
-        name: 'papai',
-        description: 'Responde com vem para o colinho do seu papai',
-    },
+    }
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
 
 (async () => {
     try {
-        console.log('Registrando slash commands...');
+        console.log('Registrando comandos...');
 
         await rest.put(
             Routes.applicationGuildCommands(
@@ -29,7 +25,7 @@ const rest = new REST({ version: '10' }).setToken(process.env.TOKEN);
             ),
             { body: commands }
         );
-        console.log('Slash commands foram registrados com sucesso.');
+        console.log('Comandos foram registrados com sucesso.');
     } catch (error) {
         console.log(`Ocorreu um erro: ${error}`);
     }
