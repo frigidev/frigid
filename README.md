@@ -1,2 +1,4 @@
 # frigid
-Desenvolvimento de um Bot através do módulo discord.js do Node.js
+Development of a bot using Node.js.
+
+Desenvolvimento de um bot através do Node.js.
